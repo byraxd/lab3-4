@@ -1,0 +1,35 @@
+{
+  "name": "NTU DP",
+  "faculties": [
+    {
+      "name": "FIT",
+      "department": {
+        "name": "Department 1",
+        "group": {
+          "name": "122-20-2",
+          "student": {
+            "name": "Burlaka",
+            "surname": "Olexander",
+            "patronymic": "Bura",
+            "sex": "MALE"
+          }
+        }
+      }
+    },
+    {
+      "name": "FIT",
+      "department": {
+        "name": "Department 2",
+        "group": {
+          "name": "135-18-1",
+          "student": {
+            "name": "Vitaliy",
+            "surname": "Volochay",
+            "patronymic": "12312",
+            "sex": "FEMALE"
+          }
+        }
+      }
+    }
+  ]
+}
