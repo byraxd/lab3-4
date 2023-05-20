@@ -1,14 +1,18 @@
 package model;
 
+import java.util.List;
+
 public class University {
     private String name;
-    private Faculty faculty;
+    private List<Faculty> faculties;
 
-    public University(String name, Faculty faculty) {
+    // Конструктор
+    public University(String name, List<Faculty> faculties) {
         this.name = name;
-        this.faculty = faculty;
+        this.faculties = faculties;
     }
 
+    // Геттери і сеттери
     public String getName() {
         return name;
     }
@@ -17,11 +21,12 @@ public class University {
         this.name = name;
     }
 
-    public Faculty getFaculty() {
-        return faculty;
+    public List<Faculty> getFaculties() {
+        return faculties;
     }
 
-    public void setFaculty(Faculty faculty) {
-        this.faculty = faculty;
+    public void setFaculties(List<Faculty> faculties) {
+        this.faculties = faculties;
     }
 }
+

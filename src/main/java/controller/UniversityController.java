@@ -3,6 +3,8 @@ package controller;
 import model.*;
 import view.UniversityView;
 
+import java.util.List;
+
 public class UniversityController {
     private University university;
     private UniversityView universityView;
@@ -31,13 +33,18 @@ public class UniversityController {
     }
 
     // Метод для відображення деталей університету
-    public void displayUniversityDetails() {
-        String universityName = university.getName();
-        String facultyName = university.getFaculty().getName();
-        String departmentName = university.getFaculty().getDepartment().getName();
-        String groupName = university.getFaculty().getDepartment().getGroup().getName();
-        String studentName = university.getFaculty().getDepartment().getGroup().getStudent().getName();
-
-        universityView.printUniversityDetails(universityName, facultyName, departmentName, groupName, studentName);
+    public static void displayUniversityDetails(University university) {
+        System.out.println("University: " + university.getName());
+        List<Faculty> faculties = university.getFaculties();
+        for (Faculty faculty : faculties) {
+            System.out.println("Faculty: " + faculty.getName());
+            Department department = faculty.getDepartment();
+            System.out.println("Department: " + department.getName());
+            Group group = department.getGroup();
+            System.out.println("Group: " + group.getName());
+            Student student = group.getStudent();
+            System.out.println("Student: " + student.getName() + " " + student.getSurname());
+            System.out.println("-----------------------------");
+        }
     }
 }
